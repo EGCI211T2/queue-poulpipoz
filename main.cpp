@@ -11,7 +11,7 @@ int main(int argc , char **argv) {
         if(strcmp(argv[i],"x")==0)
         {
             x=q.dequeue();
-            if(x!=-1) cout<<"dequeing "<<x<<endl;
+            //if(x!=-1) cout<<"dequeing "<<x<<endl;
         }
         else 
         {

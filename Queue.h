@@ -1,4 +1,3 @@
-
 #ifndef queue_h
 #define queue_h
 #include "Node.h"
@@ -23,7 +22,7 @@ if(new_node){
     }
     tailPtr = new_node;
     size++;
-    cout<<"Enqueued value "<<tailPtr->get_value()<<endl;
+    //cout<<"Enqueued value "<<tailPtr->get_value()<<endl;
     }
 }
 
@@ -35,10 +34,10 @@ int Queue::dequeue(){
     if(size == 1) tailPtr = NULL;
     size--;
     delete t;
-    //cout<<"Dequeued value "<<value<<endl;
+    cout<<"dequeing "<<value<<endl;
     return value;
   }
-  cout<<"Empty queue";
+  cout<<"Empty Queue"<<endl;
   return -1;
 }
 
@@ -49,10 +48,11 @@ Queue::Queue(){
     tailPtr = NULL;
 }
 Queue::~Queue(){
+    cout<<"Clearing queue"<<endl;
       while(size>0){
         dequeue();
       }    
-      cout<<"Deleted queue."<<endl;
+      //cout<<"Deleted queue."<<endl;
 }
 
 
